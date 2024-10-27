@@ -157,13 +157,8 @@ uint8 PASSWORD_import(void)
 	_delay_ms(10);
 
 	/* Return state 0:FAILED 1:SUCCEDDED*/
-	i = UART_receiveByte();
-	LCD_intgerToString(i);
-
-	return i;
-	return SUCCESS;
+	return UART_receiveByte();
 }
-
 void PASSWORD_reset(void)
 {
 	_delay_ms(10);
